@@ -30,9 +30,9 @@ Sonic_Display:
 		moveq	#5,d0		; play SBZ music
 
 	@music:
-		lea	(MusicList2).l,a1
+		lea	(MusicList).l,a1
 		move.b	(a1,d0.w),d0
-		jsr	(PlaySound).l	; play normal music
+		move.b	d0,mQueue+1.w	; play normal music
 
 	@removeinvincible:
 		move.b	#0,(v_invinc).w ; cancel invincibility
@@ -48,7 +48,7 @@ Sonic_Display:
 		move.w	#$C,(v_sonspeedacc).w ; restore Sonic's acceleration
 		move.w	#$80,(v_sonspeeddec).w ; restore Sonic's deceleration
 		move.b	#0,(v_shoes).w	; cancel speed shoes
-		music	bgm_Slowdown,1,0,0	; run music at normal speed
+		command	mus_ShoesOff	; run music at normal speed
 
 	@exit:
 		rts	

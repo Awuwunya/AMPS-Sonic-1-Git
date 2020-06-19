@@ -77,7 +77,7 @@ GameOver:
 		clr.b	(f_timeover).w
 
 loc_138C2:
-		music	bgm_GameOver,0,0,0	; play game over music
+		music	mus_GameOver	; play game over music
 		moveq	#3,d0
 		jmp	(AddPLC).l	; load game over patterns
 ; ===========================================================================

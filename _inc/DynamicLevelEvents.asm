@@ -155,7 +155,7 @@ loc_6EB0:
 		move.w	#$280,obY(a1)
 
 loc_6ED0:
-		music	bgm_Boss,0,1,0	; play boss music
+		music	mus_Boss	; play boss music
 		move.b	#1,(f_lockscreen).w ; lock screen
 		addq.b	#2,(v_dle_routine).w
 		moveq	#plcid_Boss,d0
@@ -198,7 +198,7 @@ DLE_LZ3:
 		cmpi.b	#7,(a1)
 		beq.s	loc_6F28
 		move.b	#7,(a1)		; modify level layout
-		sfx	sfx_Rumbling,0,1,0 ; play rumbling sound
+		sfx	sfx_Rumble	; play rumbling sound
 
 loc_6F28:
 		tst.b	(v_dle_routine).w
@@ -212,7 +212,7 @@ loc_6F28:
 		move.b	#id_BossLabyrinth,0(a1) ; load LZ boss object
 
 loc_6F4A:
-		music	bgm_Boss,0,1,0	; play boss music
+		music	mus_Boss	; play boss music
 		move.b	#1,(f_lockscreen).w ; lock screen
 		addq.b	#2,(v_dle_routine).w
 		moveq	#plcid_Boss,d0
@@ -394,7 +394,7 @@ DLE_MZ3boss:
 		move.w	#$22C,obY(a1)
 
 loc_70D0:
-		music	bgm_Boss,0,1,0	; play boss music
+		music	mus_Boss	; play boss music
 		move.b	#1,(f_lockscreen).w ; lock screen
 		addq.b	#2,(v_dle_routine).w
 		moveq	#plcid_Boss,d0
@@ -458,7 +458,7 @@ DLE_SLZ3boss:
 		move.b	#id_BossStarLight,(a1) ; load SLZ boss object
 
 loc_7144:
-		music	bgm_Boss,0,1,0	; play boss music
+		music	mus_Boss	; play boss music
 		move.b	#1,(f_lockscreen).w ; lock screen
 		addq.b	#2,(v_dle_routine).w
 		moveq	#plcid_Boss,d0
@@ -540,7 +540,7 @@ DLE_SYZ3boss:
 		addq.b	#2,(v_dle_routine).w
 
 loc_71EC:
-		music	bgm_Boss,0,1,0	; play boss music
+		music	mus_Boss	; play boss music
 		move.b	#1,(f_lockscreen).w ; lock screen
 		moveq	#plcid_Boss,d0
 		bra.w	AddPLC		; load boss patterns

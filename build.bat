@@ -1,5 +1,9 @@
 @echo off
-
-IF EXIST s1built.bin move /Y s1built.bin s1built.prev.bin >NUL
-asm68k /k /p /o ae- sonic.asm, s1built.bin >errors.txt, , sonic.lst
-fixheadr.exe s1built.bin
+"AMPS\Includer.exe" ASM68K AMPS AMPS\.Data
+asm68k /m /p /o ae- sonic.asm, s1built.md, , .lst>.log
+type .log
+if not exist s1built.md pause & exit
+"AMPS\Dual PCM Compress.exe" AMPS\.z80 AMPS\.z80.dat s1built.md _dlls\koscmp.exe
+error\convsym .lst s1built.md -input asm68k_lst -inopt "/localSign=. /localJoin=. /ignoreMacroDefs+ /ignoreMacroExp- /addMacrosAsOpcodes+" -a
+fixheadr.exe s1built.md
+del AMPS\.Data

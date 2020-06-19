@@ -139,7 +139,7 @@ Ring_Delete:	; Routine 8
 CollectRing:
 		addq.w	#1,(v_rings).w	; add 1 to rings
 		ori.b	#1,(f_ringcount).w ; update the rings counter
-		move.w	#sfx_Ring,d0	; play ring sound
+		moveq	#sfx_RingRight,d0; play ring sound
 		cmpi.w	#100,(v_rings).w ; do you have < 100 rings?
 		bcs.s	@playsnd	; if yes, branch
 		bset	#1,(v_lifecount).w ; update lives counter
@@ -152,10 +152,11 @@ CollectRing:
 	@got100:
 		addq.b	#1,(v_lives).w	; add 1 to the number of lives you have
 		addq.b	#1,(f_lifecount).w ; update the lives counter
-		move.w	#bgm_ExtraLife,d0 ; play extra life music
+		moveq	#mus_ExtraLife,d0; play extra life music
 
 	@playsnd:
-		jmp	(PlaySound_Special).l
+		move.b	d0,mQueue+2.w
+		rts
 ; End of function CollectRing
 
 ; ===========================================================================
@@ -236,7 +237,7 @@ RLoss_Count:	; Routine 0
 		move.w	#0,(v_rings).w	; reset number of rings to zero
 		move.b	#$80,(f_ringcount).w ; update ring counter
 		move.b	#0,(v_lifecount).w
-		sfx	sfx_RingLoss,0,0,0	; play ring loss sound
+		sfx	sfx_RingLoss	; play ring loss sound
 
 RLoss_Bounce:	; Routine 2
 		move.b	(v_ani3_frame).w,obFrame(a0)

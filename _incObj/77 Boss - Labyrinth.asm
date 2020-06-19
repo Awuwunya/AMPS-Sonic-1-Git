@@ -95,7 +95,7 @@ loc_17F48:
 		tst.b	$3E(a0)
 		bne.s	loc_17F70
 		move.b	#$20,$3E(a0)
-		sfx	sfx_HitBoss,0,0,0
+		sfx	sfx_BossHit	; play boss damage sound
 
 loc_17F70:
 		lea	(v_pal_dry+$22).w,a1
@@ -268,7 +268,7 @@ loc_180F6:
 		move.b	#$32,$3C(a0)
 
 loc_18112:
-		music	bgm_LZ,0,0,0		; play LZ music
+		music	mus_LZ		; play LZ music
 		if Revision=0
 		else
 			clr.b	(f_lockscreen).w
