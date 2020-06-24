@@ -106,10 +106,7 @@ loc_E0:
 		asl.l	#8,d0
 		jmp	(loc_D5A2).l
 
-		dc.w ErrorTrap
-		dc.l ErrorTrap
-		dc.l ErrorTrap
-		dc.l ErrorTrap
+		dc.b "REVXB is nasty"
 	endif
 MEGADRIVE:	dc.b "SEGA MEGA DRIVE " ; Hardware system ID (Console name)
 Date:		dc.b "(C)SEGA 1991.APR" ; Copyright holder and release date (generally year)
