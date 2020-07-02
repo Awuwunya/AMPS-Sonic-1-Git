@@ -4,7 +4,7 @@
 	sHeaderSFX	$80, ctFM5, .FM5, $00, $00
 	sHeaderSFX	$A1, ctPSG3, .PSG3, $00+$0C, $02
 
-.FM5	sModAMPS	$03, $01, $72, $0B
+.FM5	sModAMPS	$04, $01, $72, $0B
 	sVoice		pBreak
 	dc.b nA4, $16
 	sStop

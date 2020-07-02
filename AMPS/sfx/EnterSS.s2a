@@ -4,6 +4,6 @@
 	sHeaderSFX	$80, ctFM5, .FM5, $00, $02
 
 .FM5	sVoice		pEnterSS
-	sModAMPS	$01, $01, $5B, $02
+	sModAMPS	$02, $01, $5B, $02
 	dc.b nEb6, $65
 	sStop
