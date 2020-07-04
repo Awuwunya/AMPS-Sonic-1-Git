@@ -132,7 +132,7 @@ SpringYard_FM1:
 
 SpringYard_Jump1:
 	sVoice		$00
-	sModAMPS	$08, $01, $06, $04
+	sModAMPS	$09, $01, $06, $04
 	sCall		SpringYard_Call1
 	dc.b nD6, $0A, nF6, $2C
 	sCall		SpringYard_Call1
@@ -263,7 +263,7 @@ SpringYard_FM4:
 	ssDetune	$00
 
 SpringYard_Jump3:
-	sModAMPS	$01, $01, $01, $04
+	sModAMPS	$02, $01, $01, $04
 	sVoice		$02
 	sCall		SpringYard_Call10
 	saVol		$FC
@@ -325,7 +325,7 @@ SpringYard_Call9:
 SpringYard_FM5:
 	sPan		spRight, $00
 	sCall		SpringYard_Call8
-	sModAMPS	$02, $01, $02, $04
+	sModAMPS	$03, $01, $02, $04
 	ssDetune	$02
 	sJump		SpringYard_Jump3
 

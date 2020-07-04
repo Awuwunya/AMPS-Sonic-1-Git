@@ -91,7 +91,7 @@ Final_FM5:
 	sJump		Final_Jump4
 
 Final_FM1:
-	sModAMPS	$1A, $01, $06, $04
+	sModAMPS	$1B, $01, $06, $04
 
 Final_Jump4:
 	sVoice		$00

@@ -180,7 +180,7 @@ Labyrinth_Call3:
 Labyrinth_FM3:
 	sPan		spLeft, $00
 	sCall		Labyrinth_Call4
-	sModAMPS	$01, $01, $01, $04
+	sModAMPS	$02, $01, $01, $04
 
 Labyrinth_Jump1:
 	dc.b nRst, $60, nRst, nRst, nRst, nRst, nE6, $48
@@ -201,7 +201,7 @@ Labyrinth_FM4:
 	sPan		spRight, $00
 	ssDetune	$02
 	sCall		Labyrinth_Call4
-	sModAMPS	$02, $01, $02, $04
+	sModAMPS	$03, $01, $02, $04
 	sJump		Labyrinth_Jump1
 
 Labyrinth_FM5:

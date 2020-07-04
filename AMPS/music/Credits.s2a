@@ -649,7 +649,7 @@ Credits_FM1:
 	sPan		spCenter, $00
 	sGate		$00
 	sVoice		$03
-	sModAMPS	$0D, $01, $07, $04
+	sModAMPS	$0E, $01, $07, $04
 	dc.b nRst, $30
 	sCall		Credits_Call3
 	dc.b nE6, nD6, $18, nC6, $0C, nB5, $18, nC6
@@ -703,7 +703,7 @@ Credits_FM1:
 	saVol		$09
 	ssDetune	$03
 	sVoice		$18
-	sModAMPS	$00, $01, $06, $04
+	sModAMPS	$01, $01, $06, $04
 	sCall		Credits_Call9
 	saVol		$EF
 	sVoice		$1B
@@ -974,7 +974,7 @@ Credits_Loop11:
 	ssDetune	$EC
 	dc.b nC7, $01, sHold
 	ssDetune	$00
-	sModAMPS	$2C, $01, $04, $04
+	sModAMPS	$2D, $01, $04, $04
 	sModReset
 	dc.b nC7, $23
 	sModOff
@@ -1079,7 +1079,7 @@ Credits_Loop15:
 	dc.b nA5, $02
 	ssDetune	$00
 	dc.b $0A, nRst, $06
-	sModAMPS	$18, $01, $07, $04
+	sModAMPS	$19, $01, $07, $04
 	ssDetune	$E2
 	dc.b nA5, $02, sHold
 	ssDetune	$00
@@ -1105,7 +1105,7 @@ Credits_Loop16:
 	sCall		Credits_Call9
 	sVoice		$19
 	saVol		$F0
-	sModAMPS	$00, $01, $06, $04
+	sModAMPS	$01, $01, $06, $04
 	dc.b nA2, $6C, sHold, $60
 	sStop
 
@@ -1165,7 +1165,7 @@ Credits_Call17:
 	sCall		Credits_Call18
 	ssTickMulCh	$02
 	sVoice		$12
-	sModAMPS	$01, $01, $01, $04
+	sModAMPS	$02, $01, $01, $04
 	dc.b nD6, $02, nRst, $04, nD6, $08, nD6, $03
 	dc.b nRst, nD6, nRst, nC6, nRst, nA6, nRst, nF6
 	dc.b nRst, $07, nBb5, $02, nRst, $04, nBb5, $08
@@ -1299,7 +1299,7 @@ Credits_Loop20:
 	dc.b nRst, $18, nRst, $18, nG5, $06, nRst, $1E
 	dc.b nG5, $0C, nRst, $18
 	sVolEnv		v05
-	sModAMPS	$0E, $01, $01, $03
+	sModAMPS	$0F, $01, $01, $03
 	sGate		$10
 	dc.b nE5, $24, nD5, nE5, nD5, nE5, $0C, nRst
 	dc.b nD5, nRst, nF5, $24

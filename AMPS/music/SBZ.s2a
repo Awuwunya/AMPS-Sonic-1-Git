@@ -155,7 +155,7 @@ ScrabBrain_FM1:
 	dc.b nG6, nF6, nE6, nB6, nA6, nG6, nF6
 	saVol		$F8
 	sVoice		$03
-	sModAMPS	$0D, $01, $08, $05
+	sModAMPS	$0E, $01, $08, $05
 	sCall		ScrabBrain_Call1
 	sVoice		$05
 	ssDetune	$FE
@@ -261,7 +261,7 @@ ScrabBrain_Loop10:
 ScrabBrain_FM4:
 	sVoice		$04
 	sPan		spLeft, $00
-	sModAMPS	$5C, $01, $05, $04
+	sModAMPS	$5D, $01, $05, $04
 	sGate		$06
 	sCall		ScrabBrain_Call6
 	ssDetune	$04
@@ -290,7 +290,7 @@ ScrabBrain_Loop12:
 	dc.b nA5, $02
 	ssDetune	$00
 	dc.b $0A, nRst, $06
-	sModAMPS	$18, $01, $07, $04
+	sModAMPS	$19, $01, $07, $04
 	ssDetune	$E2
 	dc.b nA5, $02, sHold
 	ssDetune	$00
@@ -309,7 +309,7 @@ ScrabBrain_Call6:
 ScrabBrain_Call7:
 	sVoice		$02
 	saVol		$06
-	sModAMPS	$08, $01, $08, $04
+	sModAMPS	$09, $01, $08, $04
 
 ScrabBrain_Loop11:
 	dc.b nRst, $60, nRst, nRst, nE6, $18, nFs6, nG6
@@ -339,7 +339,7 @@ ScrabBrain_Call8:
 ScrabBrain_FM5:
 	sVoice		$04
 	sPan		spRight, $00
-	sModAMPS	$5C, $01, $05, $04
+	sModAMPS	$5D, $01, $05, $04
 	sGate		$06
 	dc.b nC5, $03, nC5, nRst, nC5, nRst, nC5, nC5
 	sGate		$00

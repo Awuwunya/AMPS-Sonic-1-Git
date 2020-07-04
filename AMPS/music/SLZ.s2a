@@ -353,7 +353,7 @@ StarLight_Jump5:
 	ssDetune	$EC
 	dc.b nC7, $01, sHold
 	ssDetune	$00
-	sModAMPS	$2C, $01, $04, $04
+	sModAMPS	$2D, $01, $04, $04
 	sModReset
 	dc.b nC7, $23
 	sModOff

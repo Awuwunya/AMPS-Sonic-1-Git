@@ -170,7 +170,7 @@ Ending_Loop3:
 	sCall		Ending_Call2
 	saVol		$F0
 	sVoice		$01
-	sModAMPS	$00, $01, $06, $04
+	sModAMPS	$01, $01, $06, $04
 	dc.b nA2, $6C
 	sStop
 
@@ -189,7 +189,7 @@ Ending_FM5:
 	saVol		$F7
 	sCall		Ending_Call1
 	saVol		$09
-	sModAMPS	$00, $01, $06, $04
+	sModAMPS	$01, $01, $06, $04
 	sCall		Ending_Call2
 	sStop
 

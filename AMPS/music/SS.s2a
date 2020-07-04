@@ -121,7 +121,7 @@ SpecialStage_Loop2:
 
 SpecialStage_FM3:
 	sVoice		$03
-	sModAMPS	$1A, $01, $04, $06
+	sModAMPS	$1B, $01, $04, $06
 	sPan		spCenter, $00
 
 SpecialStage_Loop3:
@@ -150,7 +150,7 @@ SpecialStage_Call2:
 
 SpecialStage_FM4:
 	sVoice		$03
-	sModAMPS	$1A, $01, $04, $06
+	sModAMPS	$1B, $01, $04, $06
 	sPan		spRight, $00
 
 SpecialStage_Loop4:
@@ -179,7 +179,7 @@ SpecialStage_Call4:
 
 SpecialStage_FM5:
 	sVoice		$03
-	sModAMPS	$1A, $01, $04, $06
+	sModAMPS	$1B, $01, $04, $06
 	sPan		spLeft, $00
 
 SpecialStage_Loop5:

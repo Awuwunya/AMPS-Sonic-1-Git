@@ -204,7 +204,7 @@ GreenHill_Loop3:
 
 GreenHill_Jump2:
 	sVoice		$06
-	sModAMPS	$0D, $01, $07, $04
+	sModAMPS	$0E, $01, $07, $04
 	saTranspose	$F4
 	dc.b nRst, $20
 	sCall		GreenHill_Call2
@@ -616,7 +616,7 @@ GreenHill_Call8:
 
 GreenHill_PSG1:
 	sVolEnv		v05
-	sModAMPS	$0E, $01, $01, $03
+	sModAMPS	$0F, $01, $01, $03
 	dc.b nRst, $40
 	sGate		$10
 	dc.b nE5, $18, nD5, nE5, nD5, nE5, $08, nRst

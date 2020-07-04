@@ -205,7 +205,7 @@ Boss_FM4:
 
 Boss_Jump1:
 	sVoice		$02
-	sModAMPS	$0C, $01, $04, $06
+	sModAMPS	$0D, $01, $04, $06
 
 Boss_PSG1:
 	dc.b nRst, $30
