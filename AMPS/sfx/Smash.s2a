@@ -12,7 +12,7 @@
 	sLoop		$00, $06, .Loop2
 	sStop
 
-.PSG3	sModAMPS	$02, $01, $0F, $05
+.PSG3	sModAMPS	$02, $01, $0F, $06
 	sNoisePSG	snWhitePSG3
 
 .Loop1	dc.b nB3, $18, sHold

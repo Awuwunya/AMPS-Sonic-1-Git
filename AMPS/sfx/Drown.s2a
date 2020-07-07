@@ -5,7 +5,7 @@
 	sHeaderSFX	$80, ctFM5, .FM5, $0E, $02
 
 .FM5	sVoice		pDrown
-	sModAMPS	$02, $01, $83, $0C
+	sModAMPS	$02, $01, $83, $0D
 
 .Loop2	dc.b nA0, $05, $05
 	saVol		$03
@@ -14,7 +14,7 @@
 
 .FM4	dc.b nRst, $06
 	sVoice		pDrown
-	sModAMPS	$02, $01, $6F, $0E
+	sModAMPS	$02, $01, $6F, $0F
 
 .Loop1	dc.b nC1, $04, $05
 	saVol		$03

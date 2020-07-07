@@ -5,12 +5,13 @@
 
 .FM4	sVoice		pSpring
 	dc.b nRst, $01
-	sModAMPS	$04, $01, $5D, $0F
-	dc.b nB3, $0C
+	sModAMPS	$04, $01, $5D, $10
+	dc.b nB3, $0B
 	sModOff
 
 .Loop	dc.b sHold
 	saVol		$02
 	dc.b nC5, $02
 	sLoop		$00, $19, .Loop
+	dc.b sHold, $01
 	sStop
