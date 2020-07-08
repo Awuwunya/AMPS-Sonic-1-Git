@@ -84,7 +84,7 @@ SoundIndex:
 	ptrSFX	0, EnterSS, Goal, ActionBlock, Diamonds, Continue
 
 ; SFX with special features
-	ptrSFX	$80, PushBlock
+	ptrSFX	$80, PushBlock, Waterfall
 
 ; unused SFX
 	ptrSFX	0, UnkA2, UnkAB, UnkB8

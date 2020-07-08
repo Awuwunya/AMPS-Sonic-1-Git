@@ -17,11 +17,11 @@ WSnd_Main:	; Routine 0
 		move.b	#4,obRender(a0)
 
 WSnd_PlaySnd:	; Routine 2
-;		move.b	(v_vbla_byte).w,d0 ; get low byte of VBlank counter
-;		andi.b	#$3F,d0
-;		bne.s	WSnd_ChkDel
-;		sfx	sfx_Waterfall,0,0,0	; play waterfall sound
+	; this is to avoid overwriting any other sfx
+		tst.b	mQueue+2.w		; check if any sound was queued
+		bne.s	WSnd_ChkDel		; if was, skip
+		move.b	#sfx_Waterfall,mQueue+2.w; else, play this again
 
 	WSnd_ChkDel:
 		out_of_range	DeleteObject
-		rts	
+		rts
