@@ -1435,7 +1435,7 @@ Credits_PSG3:
 	sGate		$04
 
 Credits_Loop28:
-	dc.b nA5, $0C
+	dc.b nBb5, $0C
 	sLoop		$00, $48, Credits_Loop28
 	sGate		$06
 
@@ -1473,7 +1473,7 @@ Credits_Loop32:
 
 Credits_Loop33:
 	sVolEnv		v04
-	dc.b nA5, $03, $03
+	dc.b nBb5, $03, $03
 	saVol		$10
 	sVolEnv		v08
 	sGate		$08
@@ -1499,21 +1499,21 @@ Credits_Loop34:
 	saVol		$18
 
 Credits_Loop35:
-	dc.b nA5, $02, nRst, nA5
+	dc.b nBb5, $02, nRst, nBb5
 	sLoop		$00, $08, Credits_Loop35
 
 Credits_Loop36:
-	dc.b nRst, $04, nA5, $02
+	dc.b nRst, $04, nBb5, $02
 	sLoop		$00, $08, Credits_Loop36
 	saVol		-$08
 
 Credits_Loop37:
-	dc.b nA5, $02, nRst, nA5
+	dc.b nBb5, $02, nRst, nBb5
 	sLoop		$00, $18, Credits_Loop37
 	saVol		-$10
 
 Credits_Loop38:
-	dc.b nA5, $04, nRst, nA5
+	dc.b nBb5, $04, nRst, nBb5
 	sLoop		$00, $08, Credits_Loop38
 
 Credits_Loop39:

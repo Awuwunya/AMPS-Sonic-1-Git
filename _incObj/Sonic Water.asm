@@ -32,6 +32,10 @@ Sonic_Water:
 		asr	obVelY(a0)	; slow Sonic
 		beq.s	@exit		; branch if Sonic stops moving
 		move.b	#id_Splash,(v_objspace+$300).w ; load splash object
+		
+		tst.w	(f_restart).w		; NTP: This check is here to fix a very dumb bug that causes the splash sound to play...
+		bne.s	@exit			; NTP: ...during the SBZ2 -> SBZ3 transition. Doesn't happen in the original somehow :/
+		
 		sfx	sfx_Splash	; play splash sound
 		rts
 ; ===========================================================================
@@ -54,5 +58,7 @@ Sonic_Water:
 
 	@belowmaxspeed:
 		sfx	sfx_Splash	; play splash sound
+	
+	@exit2:
 		rts
 ; End of function Sonic_Water

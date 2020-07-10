@@ -304,10 +304,10 @@ LZWindTunnels:
 		bcs.s	@chknext
 		cmp.w	6(a2),d2
 		bcc.s	@chknext	; branch if Sonic is outside a range
-	;	move.b	(v_vbla_byte).w,d0
-	;	andi.b	#$3F,d0		; does VInt counter fall on 0, $40, $80 or $C0?
-	;	bne.s	@skipsound	; if not, branch
-	;	sfx	sfx_Waterfall,0,0,0	; play rushing water sound (only every $40 frames)
+		
+		tst.b	mQueue+2.w		; check if any sound was queued
+		bne.s	@skipsound		; if was, skip
+		move.b	#sfx_Waterfall,mQueue+2.w; else, play this again
 
 	@skipsound:
 		tst.b	(f_wtunnelallow).w ; are wind tunnels disabled?
@@ -422,10 +422,10 @@ loc_3F9A:
 		clr.b	obInertia+1(a1)
 		move.b	#id_WaterSlide,obAnim(a1) ; use Sonic's "sliding" animation
 		move.b	#1,(f_jumponly).w ; lock controls (except jumping)
-	;	move.b	(v_vbla_byte).w,d0
-	;	andi.b	#$1F,d0
-	;	bne.s	locret_3FBE
-	;	sfx	sfx_Waterfall,0,0,0	; play water sound
+
+		tst.b	mQueue+2.w		; check if any sound was queued
+		bne.s	locret_3FBE		; if was, skip
+		move.b	#sfx_Waterfall,mQueue+2.w; else, play this again
 
 locret_3FBE:
 		rts	
