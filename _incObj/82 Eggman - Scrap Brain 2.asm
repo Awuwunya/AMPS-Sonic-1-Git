@@ -91,7 +91,7 @@ loc_19954:
 
 SEgg_Leap:
 		subq.w	#1,$3C(a0)
-		bgt.s	loc_199D0
+		bgt.w	loc_199D0
 		bne.s	loc_1996A
 		move.w	#-$FC,obVelX(a0) ; make Eggman leap
 		move.w	#-$3C0,obVelY(a0)
@@ -121,7 +121,7 @@ SEgg_FindBlocks:
 		moveq	#$3E,d0
 		moveq	#$40,d1
 
-SEgg_FindLoop:	
+SEgg_FindLoop:
 		adda.w	d1,a1		; jump to next object RAM
 		cmpi.b	#id_FalseFloor,(a1) ; is object a block? (object $83)
 		dbeq	d0,SEgg_FindLoop ; if not, repeat (max	$3E times)
@@ -130,6 +130,11 @@ SEgg_FindLoop:
 		move.w	#$474F,obSubtype(a1) ; set block to disintegrate
 		addq.b	#2,ob2ndRout(a0)
 		move.b	#1,obAnim(a0)
+
+	; force water level to the bottom for the transition
+		move.w	#$7FF,v_waterpos1.w
+		move.w	#$7FF,v_waterpos2.w
+		move.w	#$7FF,v_waterpos3.w
 
 loc_199D0:
 		bra.w	loc_19934

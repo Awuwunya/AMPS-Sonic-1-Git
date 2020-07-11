@@ -8273,14 +8273,12 @@ Art_LivesNums:	incbin	"artunc\Lives Counter Numbers.bin" ; 8x8 pixel numbers on 
 		include	"_inc\LevelHeaders.asm"
 		include	"_inc\Pattern Load Cues.asm"
 
-		align	$200,$FF
 		if Revision=0
 Nem_SegaLogo:	incbin	"artnem\Sega Logo.bin"	; large Sega logo
 		even
 Eni_SegaLogo:	incbin	"tilemaps\Sega Logo.bin" ; large Sega logo (mappings)
 		even
 		else
-			dcb.b	$300,$FF
 	Nem_SegaLogo:	incbin	"artnem\Sega Logo (JP1).bin" ; large Sega logo
 			even
 	Eni_SegaLogo:	incbin	"tilemaps\Sega Logo (JP1).bin" ; large Sega logo (mappings)
@@ -8697,12 +8695,6 @@ Nem_CreditText:	incbin	"artnem\Ending - Credits.bin"
 		even
 Nem_EndStH:	incbin	"artnem\Ending - StH Logo.bin"
 		even
-
-		if Revision=0
-		dcb.b $104,$FF			; why?
-		else
-		dcb.b $40,$FF
-		endc
 ; ---------------------------------------------------------------------------
 ; Collision data
 ; ---------------------------------------------------------------------------
@@ -8892,8 +8884,6 @@ byte_6A320:	dc.b 0,	0, 0, 0
 
 Art_BigRing:	incbin	"artunc\Giant Ring.bin"
 		even
-
-		align	$100,$FF
 
 ; ---------------------------------------------------------------------------
 ; Sprite locations index
