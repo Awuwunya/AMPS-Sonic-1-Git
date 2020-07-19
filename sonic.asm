@@ -6875,21 +6875,21 @@ locret_13302:
 ResumeMusic:
 		cmpi.w	#12,(v_air).w	; more than 12 seconds of air left?
 		bhi.s	@over12		; if yes, branch
-		move.w	#mus_LZ,d0	; play LZ music
+		moveq	#mus_LZ,d0	; play LZ music
 		cmpi.w	#(id_LZ<<8)+3,(v_zone).w ; check if level is 0103 (SBZ3)
 		bne.s	@notsbz
-		move.w	#mus_SBZ,d0	; play SBZ music
+		moveq	#mus_SBZ,d0	; play SBZ music
 
 	@notsbz:
 		if Revision=0
 		else
 			tst.b	(v_invinc).w ; is Sonic invincible?
 			beq.s	@notinvinc ; if not, branch
-			move.w	#mus_Invincibility,d0
+			moveq	#mus_Invincibility,d0
 	@notinvinc:
 			tst.b	(f_lockscreen).w ; is Sonic at a boss?
 			beq.s	@playselected ; if not, branch
-			move.w	#mus_Boss,d0
+			moveq	#mus_Boss,d0
 	@playselected:
 		endc
 
@@ -8198,7 +8198,7 @@ AddPoints:
 			bmi.s   @noextralife ; branch if Mega Drive is Japanese
 			addq.b  #1,(v_lives).w ; give extra life
 			addq.b  #1,(f_lifecount).w
-			music	mus_ExtraLife,1,0,0
+			music	mus_ExtraLife
 		endc
 
 @locret_1C6B6:
