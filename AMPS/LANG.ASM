@@ -4,7 +4,7 @@
 z80prg =	0		; 0 IN 68K MODE, 1 IN Z80 MODE
 ztemp =		0		; TEMPORARY REGISTER
 zundoc =	0		; SET TO 0 TO USE UNDOCUMENTED OPCODES
-zchkoffs =	1		; SET TO 0 TO NOT CHECK IX/IY AND JR OFFSETS
+zchkoffs =	0		; SET TO 0 TO NOT CHECK IX/IY AND JR OFFSETS
 z80regstr	EQUS "a b c d e h l bc de hl sp af ix iy i r ixh ixl iyh iyl (bc) (de) (hl) (sp) af' (ix) (iy)"
 
 ; EASILY MAKE SECTIONS
